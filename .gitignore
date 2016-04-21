@@ -43,7 +43,10 @@ app/assets/other/
 semantic.json
 app/semantic/
 .imdone
-app/assest/scss
+app/assets/scss
 cgi-bin/
 404.shtml
 layout-styles.css
+android/
+gulpfile.js
+bower.json
