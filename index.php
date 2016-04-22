@@ -24,9 +24,9 @@
 
         <script src="app/assets/js/ext/jquery-2.2.0.min.js" type="text/javascript"></script>
         <script src="app/assets/js/ext/pace.min.js" type="text/javascript"></script>
-        <script src="app/assets/js/ext/semantic.js"></script>
+        <script src="app/assets/js/ext/semantic.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="app/assets/css/ext/semantic.css">
+        <link rel="stylesheet" type="text/css" href="app/assets/css/ext/semantic.min.css">
         <link rel="stylesheet" media="screen" href="app/assets/css/style.css">
         <link rel="stylesheet" href="app/assets/css/ext/normalize.css">
         <link rel="stylesheet" href="app/assets/css/ext/pace-theme-flash.css">
