@@ -37,6 +37,7 @@ build/
 dist/
 maps/
 app/assets/other/
+app/semantic
 
 # Other #
 #####################
