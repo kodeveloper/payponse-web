@@ -41,7 +41,6 @@ app/assets/other/
 # Other #
 #####################
 semantic.json
-app/semantic/
 .imdone
 app/assets/scss
 cgi-bin/
