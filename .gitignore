@@ -36,14 +36,14 @@ bower_components/
 build/
 dist/
 maps/
-app/assets/other/
-app/semantic
+public/assets/other/
+public/semantic
 
 # Other #
 #####################
 semantic.json
 .imdone
-app/assets/scss
+public/assets/scss
 cgi-bin/
 404.shtml
 layout-styles.css
