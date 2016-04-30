@@ -33,26 +33,27 @@
         <link rel="stylesheet" href="public/assets/css/ext/reset.css">
     </head>
     <body>
-        <div class="overlay"></div>        
-        <div class="ui text container">
-            <form class="ui form">
-              <div class="field">
-                <label>First Name</label>
-                <input type="text" name="first-name" placeholder="First Name">
-              </div>
-              <div class="field">
-                <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <div class="ui checkbox">
-                  <input type="checkbox" tabindex="0" class="hidden">
-                  <label>I agree to the Terms and Conditions</label>
-                </div>
-              </div>
-              <button class="ui button" type="submit">Submit</button>
-            </form>
-        </div>
+        <div class="overlay"></div>
+            <h1 class="ui center aligned inverted header welcome">Welcome to Payponse Admin Panel</h1>
+            <div class="ui text container userLogin">
+                <form class="ui inverted form">
+                  <div class="field">
+                    <label>E-mail</label>
+                    <input type="text" name="e-mail" placeholder="exam@payponse.com">
+                  </div>
+                  <div class="field">
+                    <label>Şifre</label>
+                    <input type="password" name="password">
+                  </div>
+                  <div class="field">
+                    <div class="ui checkbox">
+                      <input type="checkbox" tabindex="0" class="hidden">
+                      <label>I agree to the Terms and Conditions</label>
+                    </div>
+                  </div>
+                  <button class="ui button" type="submit">Giriş yap</button>
+                </form>
+            </div>
         <script src="public/assets/js/script.js" type="text/javascript"></script>
     </body>
 </html>

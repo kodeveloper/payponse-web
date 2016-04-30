@@ -34,3 +34,12 @@ body {
 *:not(.overlay) {
     z-index: 9999;
 }
+h1.ui.header.welcome {
+    margin: 1em 0;
+    font-size: 3rem;
+}
+
+.userLogin{
+    padding: 4em;
+    border: 1px solid #fff;
+}
