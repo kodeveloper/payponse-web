@@ -11,7 +11,11 @@ class ConnectPayponseDb{
         $pass = '';
         $this->temp = new PDO($db, $user, $pass);
     }
-
+    
+    public function inserter(){
+        
+    }
+    
     function __destruct()
     {
        $this->temp=null;
