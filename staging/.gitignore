@@ -35,12 +35,16 @@ build/
 dist/
 maps/
 public/assets/other/
-public/semantic
-!semantic/dist/semantic.min.*
+
+# Semantic UI #
+######################
+!public/semantic/dist/semantic.min.*
+public/semantic/src
+public/semantic/tasks
+semantic.json
 
 # Other #
 #####################
-semantic.json
 .imdone
 public/assets/scss
 cgi-bin/
