@@ -1,5 +1,5 @@
 <?php
-require_once '../../Partner/Web/PartnerController.php';
+require_once '../../../Controller/Partner/Web/PartnerController.php';
 $email=$_POST['email'];
 $name=$_POST['name'];
 $surname=$_POST['surname'];

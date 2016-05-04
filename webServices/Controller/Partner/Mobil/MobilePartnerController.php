@@ -118,7 +118,7 @@ class MobilePartnerController extends ConnectPayponseDb{
 		$getOrderId=$this->temp->prepare('select id from order where security_code:seccode order by id desc limit 1');
 		$getOrderId->bindParam(':seccode',$security_code,PDO::PARAM_INT);
 		$getOrderId->execute();
-		$generalId=$getOrderId->fetchAll(PDO:FETCH_ASSOC);
+		$generalId=$getOrderId->fetchAll(PDO::FETCH_ASSOC);
 
 		$getPartnerDatabase=$this->temp->prepare('select db_name from partners where payponse_partner_id=:payponseId');
 		$getPartnerDatabase->bindParam(':payponseId',$payponse_partner_id,PDO::PARAM_STR);

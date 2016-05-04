@@ -1,5 +1,5 @@
 <?php
-require_once '../../Partner/Web/PartnerController.php';
+require_once '../../../Controller/Partner/Web/PartnerController.php';
 $pName=$_POST['pName'];
 $markName=$_POST['markName'];
 $taxNumber=$_POST['taxNumber'];

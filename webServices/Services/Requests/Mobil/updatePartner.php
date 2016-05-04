@@ -1,5 +1,5 @@
 <?php
-require_once '../../Partner/Mobil/MobilePartnerController.php';
+require_once '../../../Controller/Partner/Mobil/MobilePartnerController.php';
 $partnerId=$_POST['partnerId'];
 $model=$_POST['model'];
 $platform=$_POST['platform'];
