@@ -37,10 +37,7 @@
         <div class="ui three column centered grid">
             <div class="two column row">
                 <div class="logo">
-                    <img src="public/assets/images/logo.png" alt="Payponse" style="width:55%"/>
-                </div>
-                <div class="column">
-                    <h3 class="ui center aligned inverted header welcome">Welcome to Payponse Admin Panel</h1>
+                    <img src="public/assets/images/logo.png" alt="Payponse" style="width:70%"/>
                 </div>
             </div>
         </div>
