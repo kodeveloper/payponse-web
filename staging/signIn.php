@@ -59,6 +59,7 @@
                   </div>
                   <button class="ui inverted blue basic large fluid button">Giriş yap</button>
                 </form>
+                <div class="ui inverted horizontal divider">ya da</div>
                 <div class="signUp"><a href="signUp.php" class="fluid ui yellow large button">Kayıt Ol</a></div>
               </div>
         <script src="public/assets/js/script.js" type="text/javascript"></script>

@@ -57,6 +57,7 @@
                   </div>
                   <button class="ui inverted yellow basic large fluid button">Devam Et</button>
                 </form>
+                <div class="ui inverted horizontal divider">ya da</div>
                 <div class="signUp"><a href="signIn.php" class="fluid ui blue large button">Giriş Yap</a></div>
               </div>
         <script src="public/assets/js/script.js" type="text/javascript"></script>
