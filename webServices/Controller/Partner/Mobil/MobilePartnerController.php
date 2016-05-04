@@ -89,6 +89,80 @@ class MobilePartnerController extends ConnectPayponseDb{
         $updateDeviceId->bindParam(':device_id',$deviceId,PDO::PARAM_STR);
         $updateDeviceId->execute();
     }
+//Satış yapılması için cıkıcak olan qr koda basılıcak payponseid çekilicek
+    public function getPartnerPayponseId($partnerId){
+    	parent::__construct('db_payponse');
+    	$getPayponseId=$this->temp->prepare('select payponse_partner_id from partners where id=:id');
+    	$getPayponseId->bindParam(':id',$partnerId,PDO::PARAM_INT);
+    	$getPayponseId->execute();
+    	$payponseId=$getPayponseId->fetchAll(PDO::FETCH_ASSOC);
+    	$id =$payponseId[0]['payponse_partner_id'];
+    	if($id!=null){
+    		$result = array('isOK' =>1 ,'payponse_id'=> $id );
+    		echo json_encode($result);
+    	}else{
+    		$result = array('isOK' =>0 );
+    	echo json_encode($result);
+    	}
+    }
+ //QR oluşturmadan önce satışlar databasede oluşturulucak.
+    public function createSales($payponse_partner_id,$security_code,$amount,$description){
+		parent::__construct('db_payponse');
+		$createOrder =$this->temp->prepare('insert into orders values (null,:payId,:seccode,:amount,:desc,1)');
+		$createOrder->bindParam(':payId',$payponse_partner_id,PDO::PARAM_STR);
+		$createOrder->bindParam(':seccode',$security_code,PDO::PARAM_INT);
+		$createOrder->bindParam(':amount',$amount,PDO::PARAM_INT);
+		$createOrder->bindParam(':desc',$description,PDO::PARAM_STR);
+		$createOrder->execute();
+
+		$getOrderId=$this->temp->prepare('select id from order where security_code:seccode order by id desc limit 1');
+		$getOrderId->bindParam(':seccode',$security_code,PDO::PARAM_INT);
+		$getOrderId->execute();
+		$generalId=$getOrderId->fetchAll(PDO:FETCH_ASSOC);
+
+		$getPartnerDatabase=$this->temp->prepare('select db_name from partners where payponse_partner_id=:payponseId');
+		$getPartnerDatabase->bindParam(':payponseId',$payponse_partner_id,PDO::PARAM_STR);
+		$getPartnerDatabase->execute;
+		$dbName=$getDbName->fetchAll(PDO::FETCH_ASSOC);
+
+		parent::__construct('db_'.$dbName[0]['db_name']);
+		$genId =$generalId[0]['general_id'];
+		$createPartnerOrder=$this->temp->prepare('insert into orders values (null,:genId,:payId,:seccode,:amount,:desc,1)');
+		$createPartnerOrder->bindParam(':genId',$genId,PDO::PARAM_INT);
+		$createPartnerOrder->bindParam(':payId',$payponse_partner_id,PDO::PARAM_STR);
+		$createPartnerOrder->bindParam(':seccode',$security_code,PDO::PARAM_INT);
+		$createPartnerOrder->bindParam(':amount',$amount,PDO::PARAM_INT);
+		$createPartnerOrder->bindParam(':desc',$description,PDO::PARAM_STR);
+		$createPartnerOrder->execute();
+
+			if ($genId!=null ) {
+			$result  = array('isOk' =>1 ,'orderId'=>$genId);
+			echo json_encode($result);
+			}else{
+			$result  = array('isOk' =>0 ,'error_message'=>'Olusmadi');
+			echo json_encode($result);
+			}
+		}
+//Sipariş iptal edildiginde çagırlıcak.
+		public function cancelOrder ($orderId,$payponse_partner_id){
+
+			parent::__construct('db_payponse');
+			$orderUptade=$this->temp->prepare('update orders set status=0 where id=:orderId');
+			$orderUptade->bindParam(':orderId',$orderId,PDO::PARAM_INT);
+			$orderUptade->execute();
+
+			$getPartnerDatabase=$this->temp->prepare('select db_name from partners where payponse_partner_id=:payponseId');
+			$getPartnerDatabase->bindParam(':payponseId',$payponse_partner_id,PDO::PARAM_STR);
+			$getPartnerDatabase->execute;
+			$dbName=$getDbName->fetchAll(PDO::FETCH_ASSOC);
+
+		parent::__construct('db_'.$dbName[0]['db_name']);
+
+			$orderUptade=$this->temp->prepare('update orders set status=0 where general_id=:genId');
+			$orderUptade->bindParam(':genId',$orderId,PDO::PARAM_INT);
+			$orderUptade->execute();
+
+		}
 
     }
 ?>
