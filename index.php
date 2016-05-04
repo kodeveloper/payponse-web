@@ -36,7 +36,7 @@
         <div class="overlay"></div>
         <div class="ui three column centered grid">
             <div class="two column row">
-                <div class="logo"><img src="public/assets/images/logo.png" width="60%"/></div>
+                <div class="logo"><img src="staging/public/assets/images/logo.png" width="60%"/></div>
                 <div class="column">
                     <div class="slogan">
                         Quick, easy and secure payment system!
