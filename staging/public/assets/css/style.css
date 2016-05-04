@@ -9,7 +9,7 @@
 *:not(.icon) {
     font-family: 'Open Sans', sans-serif !important;
 }
-html, body { overflow: scroll; }
+html, body { overflow: scroll; overflow-x: hidden;}
 body {
     color: #fff;
     background: url(../images/bg.png) no-repeat center center fixed;
