@@ -31,6 +31,14 @@
         <link rel="stylesheet" href="public/assets/css/ext/normalize.css">
         <link rel="stylesheet" href="public/assets/css/ext/pace-theme-flash.css">
         <link rel="stylesheet" href="public/assets/css/ext/reset.css">
+        <script type="text/javascript">
+            if (localStorage.getItem('loginOk') == 1) {
+                console.log('OK');
+            }
+            else {
+                window.location.href = "index.php";
+            }
+        </script>
     </head>
     <body>
         <div class="overlay"></div>
@@ -40,30 +48,10 @@
                     <img src="public/assets/images/logo.png" alt="Payponse" style="width:55%"/>
                 </div>
                 <div class="column">
-                    <h3 class="ui center aligned inverted header welcome">Welcome to Payponse Admin Panel</h1>
+                    <h3 class="ui center aligned inverted header welcome">Welcome to Panel</h1>
                 </div>
             </div>
         </div>
-            <div class="ui text container signIn">
-                <form class="ui large inverted form" method="POST" action="dashboard.php">
-                  <div class="field">
-                    <label>E-mail</label>
-                    <input type="text" name="e-mail" placeholder="exam@payponse.com">
-                  </div>
-                  <div class="field">
-                    <label>Şifre</label>
-                    <input type="password" name="password">
-                  </div>
-                  <div class="field">
-                    <div class="ui checkbox">
-                      <input type="checkbox" tabindex="0" class="hidden">
-                      <label>Beni Hatırla</label>
-                    </div>
-                  </div>
-                  <button class="ui inverted blue basic large fluid button">Giriş yap</button>
-                </form>
-                <div class="signUp"><a href="signUp.php" class="fluid ui yellow large button">Kayıt Ol</a></div>
-              </div>
         <script src="public/assets/js/script.js" type="text/javascript"></script>
     </body>
 </html>

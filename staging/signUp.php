@@ -45,7 +45,7 @@
             </div>
         </div>
             <div class="ui text container signIn">
-                <form class="ui large inverted form" method="POST" action="dashboard.php">
+                <form class="ui large inverted form" method="POST">
                   <div class="field">
                     <label>E-mail</label>
                     <input type="text" name="e-mail" placeholder="exam@payponse.com">
@@ -55,14 +55,12 @@
                     <input type="password" name="password">
                   </div>
                   <div class="field">
-                    <div class="ui checkbox">
-                      <input type="checkbox" tabindex="0" class="hidden">
-                      <label>Beni Hatırla</label>
-                    </div>
+                    <label>Marka Adı</label>
+                    <input type="text" name="mark-name">
                   </div>
-                  <button class="ui inverted blue basic large fluid button">Giriş yap</button>
+                  <button class="ui inverted yellow basic large fluid button">Devam Et</button>
                 </form>
-                <div class="signUp"><a href="signUp.php" class="fluid ui yellow large button">Kayıt Ol</a></div>
+                <div class="signUp"><a href="signIn.php" class="fluid ui blue large button">Giriş Yap</a></div>
               </div>
         <script src="public/assets/js/script.js" type="text/javascript"></script>
     </body>
