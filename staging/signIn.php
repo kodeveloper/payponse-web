@@ -42,7 +42,7 @@
             </div>
         </div>
             <div class="ui text container signIn">
-                <form class="ui large inverted form" method="POST" action="dashboard.php">
+                <form class="ui inverted form" method="POST" action="dashboard.php">
                   <div class="field">
                     <label>E-mail</label>
                     <input type="text" name="e-mail" placeholder="exam@payponse.com">

@@ -41,7 +41,7 @@ h1.ui.header.welcome {
 }
 
 .signIn{
-    padding: 4em;
+    padding: 4em 2em;
 }
 .signUp{
     margin-top: 100px;
@@ -58,5 +58,10 @@ h1.ui.header.welcome {
     .slogan{
         font-size:35px !important;
         line-height: 35px !important;
+    }
+}
+@media screen and (max-width:400px) {
+    .signIn{
+        padding: 4em 1em;
     }
 }
