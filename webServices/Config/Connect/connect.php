@@ -7,8 +7,8 @@ class ConnectPayponseDb{
     {
         $dbName=trim(htmlspecialchars($db));
         $db = 'mysql:host=localhost;dbname='.$dbName.'';
-        $user = 'root';
-        $pass = '';
+        $user = 'pp_write';
+        $pass = 'tJ9MY;3X+#6P#u+64LoTtKV';
         $this->temp = new PDO($db, $user, $pass);
     }
 
