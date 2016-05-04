@@ -7,7 +7,7 @@
 #
 # Host: payponse.com (MySQL 5.5.45-cll-lve)
 # Database: db_mypartner
-# Generation Time: 2016-05-03 20:53:39 +0000
+# Generation Time: 2016-05-04 08:37:52 +0000
 # ************************************************************
 
 
@@ -27,6 +27,7 @@ DROP TABLE IF EXISTS `orders`;
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `general_id` int(11) NOT NULL,
   `payponse_partner_id` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `security_code` int(6) NOT NULL,
   `cid` int(11) NOT NULL,
