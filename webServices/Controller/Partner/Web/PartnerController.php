@@ -47,7 +47,7 @@ class PartnerController extends ConnectPayponseDb
      */
 
     public function addPartnerDetail($pName,$markName,$taxNumber,$taxDepartment,$address,$partnerTypeId){
-        if(empty(trim($pName)) || trim(empty($markName)) || trim(empty($taxNumber)) || trim(empty($taxDepartment)) || trim(empty($address)) || trim(empty($partnerTypeId)))
+        //if(empty(trim($pName)) || trim(empty($markName)) || trim(empty($taxNumber)) || trim(empty($taxDepartment)) || trim(empty($address)) || trim(empty($partnerTypeId)))
             echo 'Bos alan biraktiniz';
         parent::__construct('db_'.trim(htmlspecialchars($pName)));
         $time=new DateTime();
