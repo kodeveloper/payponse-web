@@ -7,9 +7,9 @@
     src: url(../fonts/echinos.ttf);
 }
 *:not(.icon) {
-    font-family: 'Open Sans', sans-serif !important;
+    /*font-family: 'Open Sans', sans-serif !important;*/
 }
-html, body { overflow: scroll; overflow-x: hidden;}
+html, body { overflow: auto; overflow-x: hidden; }
 body {
     color: #fff;
     background: url(../images/bg.png) no-repeat center center fixed;
@@ -19,6 +19,7 @@ body {
     background-size: cover;
     filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    font-family: "Raleway", sans-serif !important;
 }
 .clear {
     clear: both;
